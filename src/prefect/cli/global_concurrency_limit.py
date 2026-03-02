@@ -308,6 +308,8 @@ async def update(
                 exit_with_error(
                     f"Error updating global concurrency limit: {error_message}"
                 )
+            else:
+                raise
 
     exit_with_success(f"Updated global concurrency limit with name {name!r}.")
 
